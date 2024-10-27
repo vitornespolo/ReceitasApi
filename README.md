@@ -1,6 +1,8 @@
-Api para consumir Receitas
+# *Api para consumir Receitas*
 
-Exempolo de curl GET que pode ser usada para executar testes
+### Exempolo de curl GET que pode ser usada para executar testes
+
+```
 curl --location 'http://localhost:8080/receitas/carrot' \
 --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
 --header 'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
@@ -15,3 +17,4 @@ curl --location 'http://localhost:8080/receitas/carrot' \
 --header 'sec-ch-ua: "Not?A_Brand";v="99", "Chromium";v="130"' \
 --header 'sec-ch-ua-mobile: ?0' \
 --header 'sec-ch-ua-platform: "Linux"'
+```

@@ -1,6 +1,7 @@
 package com.consumir.api.receita.service;
 
 import com.consumir.api.receita.model.RecipeResponse;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -23,7 +24,12 @@ public class ReceitasService {
         } catch (HttpClientErrorException e) {
 
             return ResponseEntity.status(e.getStatusCode())
-                    .body("Erro ao buscar receitas: " + e.getMessage());
+                    .body("Erro ao buscar receitas: " + receitas + "\n" + e.getMessage());
+        } catch (Exception e) {
+
+        // Captura qualquer outra exceção
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Ocorreu um erro inesperado: " + e.getMessage());
         }
     }
 }

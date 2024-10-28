@@ -1,6 +1,6 @@
 # *Api para consumir Receitas*
 
-### Exempolo de curl GET que pode ser usada para executar testes
+### Exemplo de curl GET que pode ser usada para executar testes
 
 ```
 curl --location 'http://localhost:8080/receitas/carrot' \
